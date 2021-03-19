@@ -1,0 +1,52 @@
+{% extends "temp.html" %}
+{% block body %}
+
+<br>
+<br>
+{% if k==0 %}
+<div class="small-container">
+<div class="row">
+{% for i in r %}
+<div class="col-4">
+<a href="/{{i['uidd']}}" class="nav-link active"><h4>{{i['tit']}}</h4><p> {{i['au']}}</p><p> {{i['cat']}}</p></a>
+</div>
+{% endfor %}
+</div>
+</div>
+{% else %}
+{% for i in r %}
+
+
+<div class="fb">
+<div class="ts text-center">
+<h2>{{i['tit']}}</h2></div>
+</div>
+
+
+<br>
+
+<div class="fbb">
+<div class="tss text-center">
+<h3>{{i['cat']}}</h3></div>
+</div>
+
+
+<br>
+<br>
+{{i['bc']}}
+
+<br>
+<br>
+
+
+<div class="fbb">
+<div class="tss text-center">
+<h3> Blog By-: {{i['au']}}</h3></div>
+</div>
+
+{% endfor %}
+
+
+{% endif %}
+
+{% endblock %}

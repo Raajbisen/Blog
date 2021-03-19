@@ -1,0 +1,90 @@
+{% extends "temp.html" %}
+{% block body %}
+
+<center>
+
+{% with messages=get_flashed_messages() %}
+                {% if messages %}
+                <br>
+                <div class="alert alert-success" role="alert">
+                    {{messages[0]}}
+                </div>
+                {% endif %}
+                {% endwith %}
+
+</center>
+<br>
+<br>
+
+
+<div class="container">
+   <form action="" method="POST">
+            <div class="form">
+                <div class="note">
+                
+                    <p>Contact Us</p>
+                </div>
+
+  <div class="form-content">
+   Name:
+	<div class="input-group">
+		
+		    
+		 
+		<input class="form-control" name="Name"  required/>
+	
+	<div class="input-group-append">
+	</div>
+	</div>
+<br>
+
+ Email:
+
+	<div class="input-group">
+		<div class="input-group-prepend1">
+    
+		   
+		 </div>
+		<input class="form-control" name="Email"  required/>
+	</div>
+<br>
+
+
+
+Message:
+	<div class="input-group">
+		<div class="input-group-prepend1">
+		    
+		 </div>
+		<input class="form-control" name="Message" required/>
+	</div>
+
+<br>
+
+
+	
+<br>
+
+
+	
+                
+
+                            
+                            <div class="form-group text-center">
+                                <input type="submit" value="Send Message " name="ct" class="btnSubmit"/>
+
+
+                            </div>
+
+                        </div>
+                     </form>   
+                        </div>
+                    </div>
+
+                </div>
+
+
+<br>
+<br>
+
+{% endblock %}

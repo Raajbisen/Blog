@@ -1,0 +1,104 @@
+{% extends "temp.html" %}
+{% block body %}
+  
+  
+  {% with messages=get_flashed_messages() %}
+                {% if messages %}
+                <br>
+                <div class="alert alert-success" role="alert">
+                    {{messages[0]}}
+                </div>
+                {% endif %}
+                {% endwith %}
+  
+
+   <div class="container">
+<form action="" method="POST">
+            <div class="form">
+                <div class="note">
+                
+                    <center><h2>Add Blog</h2></center>
+                </div>
+  <div class="form-content">
+  Title:
+	<div class="input-group">
+	
+	<br>
+		<div class="input-group-prepend7">
+ 
+		 </div>
+		<input name="tit" class="form-control" placeholder="Title">
+	</div>
+<br>
+
+Subtitle:
+
+    <div class="input-group">
+		<div class="input-group-prepend8">
+		    
+		 </div>
+	    <input class="form-control" name="sub" placeholder="subtitle" >
+	</div>
+	
+	
+	<br>
+Author:
+
+    <div class="input-group">
+		<div class="input-group-prepend8">
+		    
+		 </div>
+	    <input class="form-control" name="au" placeholder="Author" >
+    </div>
+   <br> 
+    
+ Category:   
+ 
+ <div class="input-group">
+		<div class="input-group-prepend8">
+		    
+		 </div>
+    </div>
+<select name="gen" required>
+        <option value="travel">Travel Blog</option>
+        <option value="food">Food Blog</option>
+        <option value="music">Music Blog</option>
+        <option value="sports">Sports Blog</option>
+        <option value="fitness">Fitness Blog</option>
+        <option value="lifestyle">Lifestyle Blog</option>
+        <option value="finance">Finance Blog</option>
+        <option value="political">Political Blog</option>
+</select>
+    
+<br>
+<br>  
+	
+	
+<br>
+Blog Content:
+
+    
+    <div class="input-group">
+		<div class="input-group-prepend4">
+		    
+		 </div>
+        <textarea rows="20" cols="55" type="text" name="bc" required></textarea>
+	</div>
+	<br>
+	
+	
+	<br>
+	<br>
+                            
+                            <div class="form-group text-center">
+                                <input type="submit" value="Submit" name="se" class="btnSubmit"/>
+                                <input type="submit" value="Back" name="lo" class="btnSubmit" formnovalidate />
+
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+</form>                  
+                </div>
+{% endblock %}
