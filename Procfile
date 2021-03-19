@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT sms:app
+web: gunicorn -b :$PORT blog:app
